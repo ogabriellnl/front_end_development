@@ -1,5 +1,10 @@
-<div class="grid-container">
-  <div class="item1">1</div>
-  <div class="item2">2</div>
-  <div class="item3">3</div>
+<div class="container">
+  <div class="box-titulo">
+
+  </div>
+  <div class="grid-container">
+    <div *ngFor="let oDado of aDadosFilmes; index as i" [ngClass]="getClassItem((i+1))">
+      <img [src]="oDado.poster" alt="">
+    </div>
+  </div>
 </div>
