@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FilmesService } from '../services/filmes.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+
   title = 'filmes';
+
+  constructor(
+    private oFilmesService: FilmesService
+  ) { }
 }
