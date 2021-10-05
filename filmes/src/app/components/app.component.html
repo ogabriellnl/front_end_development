@@ -1,10 +1,18 @@
-<div class="container">
-  <div class="box-titulo">
-
+<section class="container">
+  <div class="nav">
+    <ul>
+      <li><a class="active material-icons" href="#home">home</a></li>
+      <li><a class="label-nav" href="#lancamentos">Lançamentos</a></li>
+      <li><a class="label-nav" href="#genero">Gênero</a></li>
+    </ul>
   </div>
+
   <div class="grid-container">
     <div *ngFor="let oDado of aDadosFilmes; index as i" [ngClass]="getClassItem((i+1))">
-      <img [src]="oDado.poster" alt="">
+      <img [src]="oDado.poster" [alt]="oDado.descricao">
+      <p class="title">{{oDado.nome}}</p>
+      <p class="year-director">{{oDado.ano}} - {{oDado.diretor}}</p>
+      <p class="description">{{oDado.descricao}}</p>
     </div>
   </div>
-</div>
+</section>
